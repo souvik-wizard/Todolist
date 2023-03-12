@@ -42,6 +42,9 @@ app.post("/delete",async function (req, res) {
   res.redirect("/");
 });
 
+app.get("*", (req, res) => {
+  res.redirect("/");
+});
 
 app.listen(process.env.PORT || 80, function () {
   console.log("Server started.");
